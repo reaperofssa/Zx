@@ -1,0 +1,172 @@
+/* Import Classy Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: url('https://files.catbox.moe/v406s6.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* Rotate Screen Prompt */
+#rotate-screen {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+    #rotate-screen {
+        display: block;
+    }
+    .container {
+        display: none;
+    }
+}
+
+/* Container */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top Bar */
+.top-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Profile & Leaderboard */
+.profile img, .leaderboard img {
+    width: 40px; /* Reduced size */
+    cursor: pointer;
+}
+
+/* Balance Display */
+.balance {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 6px 10px; /* Reduced padding */
+    border-radius: 6px;
+    color: white;
+    font-size: 14px; /* Reduced font size */
+}
+
+.balance img {
+    width: 18px; /* Reduced icon size */
+    margin: 0 4px;
+}
+
+/* Character Display */
+.character-display {
+    position: absolute;
+    top: 55%;  /* Move slightly lower */
+    left: 52%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Character Image */
+#lobby-character {
+    width: 160px; /* Reduced size */
+    animation: floatCharacter 20s infinite ease-in-out;
+}
+
+/* Pet Image */
+#lobby-pet {
+    width: 80px;  /* Adjust size */
+    position: absolute;
+    left: 220px;  /* Move further to the right */
+    top: 4px;  /* Move further down */
+    animation: floatPet 3s infinite ease-in-out;
+}
+
+/* Floating Animation */
+@keyframes floatCharacter {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes floatPet {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Side Menu */
+.side-menu {
+    position: absolute;
+    left: 15px;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Reduced gap */
+}
+
+.menu-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 14px; /* Smaller font */
+    padding: 8px 12px; /* Reduced padding */
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    width: 140px; /* Reduced width */
+    text-align: left;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+/* Start Button */
+.start-section {
+    position: absolute;
+    bottom: 40px;
+    right: 15px;
+}
+
+.start-btn {
+    background: #ffcc00;
+    color: black;
+    font-size: 18px; /* Reduced size */
+    font-weight: bold;
+    padding: 12px 24px; /* Smaller button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.8);
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #ff9900;
+}
