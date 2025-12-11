@@ -306,7 +306,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   nameGrad.addColorStop(0.5, "#9d4edd");
   nameGrad.addColorStop(1, "#dc143c");
   ctx.fillStyle = nameGrad;
-  ctx.font = "bold 72px Georgia";
+  ctx.font = "bold 72px Arial";
   ctx.fillText(data.userName, x, y);
   
   const nameWidth = ctx.measureText(data.userName).width;
@@ -366,7 +366,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
     ctx.fillText(lbl, bx+25, by+42);
     
     ctx.fillStyle = pri ? "#dc143c" : "#b57edc";
-    ctx.font = "bold 42px Georgia";
+    ctx.font = "bold 42px Arial";
     const txt = val.toLocaleString() + unit;
     ctx.fillText(txt, bx+25, by+95);
   };
