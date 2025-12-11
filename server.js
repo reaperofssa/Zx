@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-registerFont(path.join(__dirname, "public/fonts/Arial.ttf"), {
+registerFont(path.join(__dirname, "public/fonts/arial.ttf"), {
   family: "Arial",
 });
 
