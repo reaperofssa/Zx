@@ -26,8 +26,8 @@ async function loadImageFromUrl(url) {
 }
 
 // Default images (using placeholder services)
-const DEFAULT_BACKGROUND = 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1920&h=1080&fit=crop';
-const DEFAULT_ICON = 'https://via.placeholder.com/150/8b0000/ffffff?text=Icon';
+const DEFAULT_BACKGROUND = 'https://files.catbox.moe/mu1liu.jpeg';
+const DEFAULT_ICON = 'https://files.catbox.moe/ujk28g.png';
 
 function renderType1(ctx, bg, pfp, icon, data) {
   const P = 70, PFP = 280;
