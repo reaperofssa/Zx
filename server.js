@@ -34,8 +34,8 @@ async function loadImageFromUrl(url) {
 }
 
 // Default images (using placeholder services)
-const DEFAULT_BACKGROUND = 'https://files.catbox.moe/mu1liu.jpeg';
-const DEFAULT_ICON = 'https://files.catbox.moe/ujk28g.png';
+const DEFAULT_BACKGROUND = 'https://files.catbox.moe/j5uk7p.jpeg';
+const DEFAULT_ICON = 'https://files.catbox.moe/9ek9hu.png';
 
 function renderType1(ctx, bg, pfp, icon, data) {
   const P = 70, PFP = 280;
@@ -161,7 +161,7 @@ function renderType2(ctx, bg, pfp, icon, data) {
   ctx.fillStyle = "#fff";
   ctx.font = "bold 22px Arial";
   ctx.textAlign = "center";
-  ctx.fillText("PREMIUM MEMBER", P+PFP/2, P+30+PFP-20);
+  ctx.fillText("ADMIN", P+PFP/2, P+30+PFP-20);
   ctx.textAlign = "left";
   
   ctx.shadowColor = "#8b0000";
@@ -295,7 +295,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.fillStyle = "#fff";
   ctx.font = "bold 28px Arial";
   ctx.textAlign = "center";
-  ctx.fillText("ELITE PREMIUM", P+PFP/2, P+30+PFP-30);
+  ctx.fillText("DEVELOPER", P+PFP/2, P+30+PFP-30);
   ctx.textAlign = "left";
   
   ctx.drawImage(icon, CARD_WIDTH-240, 70, 170, 170);
