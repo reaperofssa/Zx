@@ -337,7 +337,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.strokeRect(x-25, y-45, statusW, 65);
   ctx.fillStyle = "#b57edc";
   ctx.font = "bold 36px Arial";
-  ctx.fillText("★ " + data.status + " ★", x, y);
+  ctx.fillText(data.status, x, y);
   
   const drawEliteBox = (lbl, val, unit, bx, by, pri) => {
     const boxGrad = ctx.createLinearGradient(bx, by, bx, by+140);
@@ -403,8 +403,8 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.font = "bold 24px Arial";
   ctx.fillText("RANK", P+785, sy+212);
   ctx.fillStyle = "#b57edc";
-  ctx.font = "bold 42px Georgia";
-  ctx.fillText("★ " + data.rank + " ★", P+785, sy+265);
+  ctx.font = "bold 42px Arial";
+  ctx.fillText(data.rank, P+785, sy+265);
   
   let rx = P+1190, ry = P+PFP+140;
   const drawInfo = (lbl, val, col) => {
