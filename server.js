@@ -1,10 +1,18 @@
 // api/generate-card.js
-const { createCanvas, loadImage } = require('canvas');
+const path = require("path");
+const { registerFont, createCanvas, loadImage } = require('canvas');
 const express = require('express');
 
 const app = express();
 app.use(express.json());
 
+registerFont(path.join(__dirname, "public/fonts/Arial.ttf"), {
+  family: "Arial",
+});
+
+registerFont(path.join(__dirname, "public/fonts/Georgia.ttf"), {
+  family: "Georgia",
+});
 const CARD_WIDTH = 1920;
 const CARD_HEIGHT = 1080;
 
