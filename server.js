@@ -171,12 +171,12 @@ function renderType2(ctx, bg, pfp, icon, data) {
   
   let x = P+PFP+70, y = P+110;
   ctx.fillStyle = "#dc143c";
-  ctx.font = "bold 64px Georgia";
+  ctx.font = "bold 64px Arial";
   ctx.fillText(data.userName, x, y);
   ctx.fillRect(x, y+10, ctx.measureText(data.userName).width, 3);
   y += 70;
   ctx.fillStyle = "#9d4edd";
-  ctx.font = "italic 36px Georgia";
+  ctx.font = "36px Arial";
   ctx.fillText(data.username, x, y);
   y += 60;
   ctx.strokeStyle = "#9d4edd";
@@ -186,7 +186,7 @@ function renderType2(ctx, bg, pfp, icon, data) {
   ctx.fillStyle = "rgba(157,78,221,0.15)";
   ctx.fillRect(x-15, y-38, sw+40, 55);
   ctx.fillStyle = "#9d4edd";
-  ctx.font = "bold 32px Georgia";
+  ctx.font = "bold 32px Arial";
   ctx.fillText(data.status, x, y);
   
   const drawPBox = (lbl, val, unit, bx, by, pri) => {
@@ -199,10 +199,10 @@ function renderType2(ctx, bg, pfp, icon, data) {
     ctx.lineWidth = pri ? 4 : 2;
     ctx.strokeRect(bx, by, 340, 120);
     ctx.fillStyle = "#999";
-    ctx.font = "22px Georgia";
+    ctx.font = "22px Arial";
     ctx.fillText(lbl, bx+25, by+35);
     ctx.fillStyle = pri ? "#dc143c" : "#9d4edd";
-    ctx.font = "bold 38px Georgia";
+    ctx.font = "bold 38px Arial";
     const txt = val.toLocaleString() + unit;
     ctx.fillText(txt, bx+25, by+80);
   };
@@ -223,20 +223,20 @@ function renderType2(ctx, bg, pfp, icon, data) {
   ctx.lineWidth = 5;
   ctx.strokeRect(P+740, sy+150, 340, 120);
   ctx.fillStyle = "#999";
-  ctx.font = "22px Georgia";
+  ctx.font = "22px Arial";
   ctx.fillText("RANK", P+765, sy+185);
   ctx.fillStyle = "#9d4edd";
-  ctx.font = "bold 36px Georgia";
+  ctx.font = "bold 36px Arial";
   ctx.fillText(data.rank, P+765, sy+230);
   
   let rx = P+1170, ry = P+PFP+120;
   const drawInfo = (lbl, val, col="#fff") => {
     ctx.fillStyle = "#999";
-    ctx.font = "24px Georgia";
+    ctx.font = "24px Arial";
     ctx.fillText(lbl, rx, ry);
     ry += 38;
     ctx.fillStyle = col;
-    ctx.font = "bold 30px Georgia";
+    ctx.font = "bold 30px Arial";
     ctx.fillText(val, rx, ry);
     ry += 70;
   };
@@ -246,7 +246,7 @@ function renderType2(ctx, bg, pfp, icon, data) {
   
   ctx.fillStyle = "#8b0000";
   ctx.fillRect(P, CARD_HEIGHT-100, CARD_WIDTH-P*2, 3);
-  ctx.font = "28px Georgia";
+  ctx.font = "28px Arial";
   ctx.fillStyle = "#9d4edd";
   ctx.fillText(data.certifiedTag, P, CARD_HEIGHT-55);
   ctx.fillStyle = "#dc143c";
@@ -293,9 +293,9 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.lineWidth = 2;
   ctx.strokeRect(P, P+30+PFP-70, PFP, 70);
   ctx.fillStyle = "#fff";
-  ctx.font = "bold 28px Georgia";
+  ctx.font = "bold 28px Arial";
   ctx.textAlign = "center";
-  ctx.fillText("★ ELITE PREMIUM ★", P+PFP/2, P+30+PFP-30);
+  ctx.fillText("ELITE PREMIUM", P+PFP/2, P+30+PFP-30);
   ctx.textAlign = "left";
   
   ctx.drawImage(icon, CARD_WIDTH-240, 70, 170, 170);
@@ -317,7 +317,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   
   y += 80;
   ctx.fillStyle = "#b57edc";
-  ctx.font = "italic 40px Georgia";
+  ctx.font = "40px Arial";
   ctx.fillText(data.username, x, y);
   
   y += 70;
@@ -336,7 +336,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.lineWidth = 3;
   ctx.strokeRect(x-25, y-45, statusW, 65);
   ctx.fillStyle = "#b57edc";
-  ctx.font = "bold 36px Georgia";
+  ctx.font = "bold 36px Arial";
   ctx.fillText("★ " + data.status + " ★", x, y);
   
   const drawEliteBox = (lbl, val, unit, bx, by, pri) => {
@@ -362,7 +362,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
     ctx.fillRect(bx+350-2, by, 2, 35);
     
     ctx.fillStyle = "#aaa";
-    ctx.font = "bold 24px Georgia";
+    ctx.font = "bold 24px Arial";
     ctx.fillText(lbl, bx+25, by+42);
     
     ctx.fillStyle = pri ? "#dc143c" : "#b57edc";
@@ -400,7 +400,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.fillRect(P+1110-2, sy+170, 2, 40);
   
   ctx.fillStyle = "#aaa";
-  ctx.font = "bold 24px Georgia";
+  ctx.font = "bold 24px Arial";
   ctx.fillText("RANK", P+785, sy+212);
   ctx.fillStyle = "#b57edc";
   ctx.font = "bold 42px Georgia";
@@ -409,11 +409,11 @@ function renderType3(ctx, bg, pfp, icon, data) {
   let rx = P+1190, ry = P+PFP+140;
   const drawInfo = (lbl, val, col) => {
     ctx.fillStyle = "#aaa";
-    ctx.font = "28px Georgia";
+    ctx.font = "28px Arial";
     ctx.fillText(lbl, rx, ry);
     ry += 45;
     ctx.fillStyle = col;
-    ctx.font = "bold 34px Georgia";
+    ctx.font = "bold 34px Arial";
     ctx.fillText(val, rx, ry);
     ry += 80;
   };
@@ -428,7 +428,7 @@ function renderType3(ctx, bg, pfp, icon, data) {
   ctx.fillStyle = footerGrad;
   ctx.fillRect(P, CARD_HEIGHT-100, CARD_WIDTH-P*2, 3);
   
-  ctx.font = "32px Georgia";
+  ctx.font = "32px Arial";
   ctx.fillStyle = "#b57edc";
   ctx.fillText(data.certifiedTag, P, CARD_HEIGHT-55);
   
