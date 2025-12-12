@@ -35,7 +35,7 @@ async function loadImageFromUrl(url) {
 }
 
 // Default images (using placeholder services)
-const DEFAULT_BACKGROUND = 'https://winterx.netlify.app/IMG_9070.png';
+const DEFAULT_BACKGROUND = 'https://winterx.netlify.app/IMG_9070.jpeg';
 const DEFAULT_ICON = 'https://winterx.netlify.app/IMG_9072.png';
 
 function renderType1(ctx, bg, pfp, icon, data) {
