@@ -6,13 +6,14 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-registerFont(path.join(__dirname, "public/fonts/arial.ttf"), {
+registerFont(path.resolve("public/fonts/arial.ttf"), {
   family: "Arial",
 });
 
-registerFont(path.join(__dirname, "public/fonts/Georgia.ttf"), {
+registerFont(path.resolve("public/fonts/Georgia.ttf"), {
   family: "Georgia",
 });
+
 const CARD_WIDTH = 1920;
 const CARD_HEIGHT = 1080;
 
