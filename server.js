@@ -6,11 +6,11 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-registerFont(path.resolve("public/fonts/arial.ttf"), {
+registerFont(path.resolve(process.cwd(), "public/fonts/arial.ttf"), {
   family: "Arial",
 });
 
-registerFont(path.resolve("public/fonts/Georgia.ttf"), {
+registerFont(path.resolve(process.cwd(), "public/fonts/Georgia.ttf"), {
   family: "Georgia",
 });
 
