@@ -484,14 +484,30 @@ app.post('/api/generate-card', async (req, res) => {
     const canvas = createCanvas(CARD_WIDTH, CARD_HEIGHT);
     const ctx = canvas.getContext('2d');
 
-    const data = {
-      userName, joinDate, username, status,
-      totalPoints, referralPoints, reputation,
-      pointsThisWeek, pointsCurrentEvent, rank,
-      referralCode, userId, certifiedTag,
-      groupName, groupUsername
-    };
+    // Normalize fancy letters and strip unwanted symbols
+const normalizeName = (text) =>
+  text
+    .normalize('NFKC')                  // convert fancy Unicode letters
+    .replace(/[\u0300-\u036f]/g, '')    // remove combining marks (Zalgo)
+    .replace(/[^\p{L}\p{N}\s@#]/gu, ''); // remove symbols except letters, numbers, space, @, #
 
+const data = {
+  userName: normalizeName(userName), // only normalize and clean name
+  joinDate,
+  username,
+  status,
+  totalPoints,
+  referralPoints,
+  reputation,
+  pointsThisWeek,
+  pointsCurrentEvent,
+  rank,
+  referralCode,
+  userId,
+  certifiedTag,
+  groupName,
+  groupUsername
+};
     if (type === 1) renderType1(ctx, bg, pfp, icon, data);
     else if (type === 2) renderType2(ctx, bg, pfp, icon, data);
     else if (type === 3) renderType3(ctx, bg, pfp, icon, data);
